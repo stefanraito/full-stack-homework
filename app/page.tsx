@@ -15,7 +15,6 @@ export default function Page() {
         Choose a page to get started
       </Typography>
       <Stack direction="row" spacing={2} justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
-        {/* <CrashTester /> */} 
         <Link href="/numbers" passHref>
           <Button variant="contained">Numbers</Button>
         </Link>

@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import * as numberService from '../../../services/numbers';
+import { getNumbers, createNumber } from '../../../services/numbers';
 
 export async function GET() {
   try {
-    const rows = await numberService.getNumbers();
+    const rows = await getNumbers();
     return NextResponse.json(rows);
   } catch (err) {
     console.error(err);
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    const newNumber = await numberService.createNumber(value);
+    const newNumber = await createNumber(value);
     return NextResponse.json(newNumber, { status: 201 });
   } catch (err) {
     console.error(err);

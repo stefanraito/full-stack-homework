@@ -1,7 +1,6 @@
 import { Component, ReactNode, ErrorInfo } from "react";
 
 
-
 export class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
     constructor(props: { children: ReactNode }) {
       super(props);
@@ -25,7 +24,7 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, { hasError
       if (this.state.hasError) {
         return (
           <div style={{ padding: '2rem', textAlign: 'center' }}>
-            <h1>Oops—something went wrong.</h1>
+            <h1>Something went wrong.</h1>
             <button onClick={this.resetError}>Try again</button>
           </div>
         );
