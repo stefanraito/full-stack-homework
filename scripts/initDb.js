@@ -33,10 +33,10 @@ async function initDB() {
   }
 
   const gradeSeeds = [
-    { class: 'Math',    grade: 92 },
-    { class: 'Math',    grade: 76 },
-    { class: 'Math',    grade: 88 },
-    { class: 'Math',    grade: 64 },
+    { class: 'Math', grade: 92 },
+    { class: 'Math', grade: 76 },
+    { class: 'Math', grade: 88 },
+    { class: 'Math', grade: 64 },
     { class: 'Science', grade: 85 },
     { class: 'Science', grade: 90 },
     { class: 'Science', grade: 73 },

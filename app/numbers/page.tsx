@@ -101,10 +101,10 @@ export default function NumbersPage() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="center">ID 1</TableCell>
-              <TableCell align="center">Number 1</TableCell>
-              <TableCell align="center">ID 2</TableCell>
-              <TableCell align="center">Number 2</TableCell>
+              <TableCell align="center">ID 1</TableCell>
+              <TableCell align="center">Number 1</TableCell>
+              <TableCell align="center">ID 2</TableCell>
+              <TableCell align="center">Number 2</TableCell>
               <TableCell align="center">Sum</TableCell>
             </TableRow>
           </TableHead>
