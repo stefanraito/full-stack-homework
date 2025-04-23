@@ -13,13 +13,16 @@ import {
   TableRow,
   TableCell,
   Paper,
-  Typography
+  Typography,
+  Alert,
+  Snackbar
 } from '@mui/material';
 import { NumbersRow } from '@/types/numbers';
 
 export default function NumbersPage() {
   const [valueInput, setValueInput] = useState<string>('');
   const [rows, setRows] = useState<NumbersRow[]>([]);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const numberError =
     valueInput === ''
@@ -52,10 +55,26 @@ export default function NumbersPage() {
 
     setValueInput('');
     fetchData();
+    setOpenSnackbar(true);
   };
 
   return (
     <Container maxWidth="md" sx={{ mt: 4 }}>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000}
+        onClose={() => setOpenSnackbar(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={() => setOpenSnackbar(false)}
+          severity="success"
+          sx={{ width: '100%' }}
+        >
+          Number added successfully.
+        </Alert>
+      </Snackbar>
+
       <Typography variant="h4" align="center" gutterBottom>
         Number Pairs
       </Typography>
