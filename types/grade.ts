@@ -1,4 +1,5 @@
 export type GradeEntry = { id: number; class: string; grade: number };
+
 export type ClassAverage = { class: string; average: number };
 
 export const classesList = ['Math','Science','History'] as const;

@@ -4,9 +4,9 @@ import db from '../lib/db';
 export async function getNumbers(): Promise<NumbersRow[]> {
   const { rows } = await db.query<NumbersRow>(
     `SELECT
-       a.id   AS id1,
+       a.id AS id1,
        a.value AS value1,
-       b.id   AS id2,
+       b.id AS id2,
        b.value AS value2,
        (a.value + b.value) AS sum
      FROM numbers a
